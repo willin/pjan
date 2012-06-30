@@ -1,47 +1,47 @@
-ËµÃ÷£º
+ï»¿è¯´æ˜ï¼š
 
-PJANÊÇÔÚPjax»ù´¡ÉÏ¼ÓÈëJSONÖ§³ÖµÄ²å¼ş£¬Ô­×÷ÕßWelefen¡£
+PJANæ˜¯åœ¨PjaxåŸºç¡€ä¸ŠåŠ å…¥JSONæ”¯æŒçš„æ’ä»¶ï¼ŒåŸä½œè€…Welefenã€‚
 
-¹ØÓÚjQuery.PJAX²å¼şµÄÖ§³ÖÇëÒÆ²½£ºhttp://www.welefen.com/pjax-version-1-1-and-contain-kissy.html
+å…³äºjQuery.PJAXæ’ä»¶çš„æ”¯æŒè¯·ç§»æ­¥ï¼šhttp://www.welefen.com/pjax-version-1-1-and-contain-kissy.html
 
-Ê¾Àı´úÂë£º
+ç¤ºä¾‹ä»£ç ï¼š
 jQuery(document).ready(function(w){
     var $page_title='';
     w.pjan({
-        selector: 'a',//Ñ¡ÔñÆ÷¡£¿ÉÓÃjQueryÉ¸Ñ¡Óï·¨¡£±ØÌî¡£
-        container: '#tmpholder', //ÄÚÈİÌæ»»µÄÈİÆ÷£¬Ã»Ê²Ã´Êµ¼ÊÓÃ´¦¡£±ØÌî¡£
-        show: 'fade', //Õ¹ÏÖµÄ¶¯»­£¬Ö§³ÖÄ¬ÈÏºÍfade, ¿ÉÒÔ×Ô¶¨Òå¶¯»­·½Ê½£¬ÕâÀïÎª×Ô¶¨ÒåµÄfunction¼´¿É¡£
-        cache: 60, //Ê¹ÓÃ»º´æ£¬µ¥Î»Ãë£¬0»òflaseÈ¡Ïû¡£
-        storage: true, //ÊÇ·ñÊ¹ÓÃ±¾µØ´æ´¢¡£
-        titleSuffix: '- by Willin PJAN', //±êÌâºó×º
+        selector: 'a',//é€‰æ‹©å™¨ã€‚å¯ç”¨jQueryç­›é€‰è¯­æ³•ã€‚å¿…å¡«ã€‚
+        container: '#tmpholder', //å†…å®¹æ›¿æ¢çš„å®¹å™¨ï¼Œæ²¡ä»€ä¹ˆå®é™…ç”¨å¤„ã€‚å¿…å¡«ã€‚
+        show: 'fade', //å±•ç°çš„åŠ¨ç”»ï¼Œæ”¯æŒé»˜è®¤å’Œfade, å¯ä»¥è‡ªå®šä¹‰åŠ¨ç”»æ–¹å¼ï¼Œè¿™é‡Œä¸ºè‡ªå®šä¹‰çš„functionå³å¯ã€‚
+        cache: 60, //ä½¿ç”¨ç¼“å­˜ï¼Œå•ä½ç§’ï¼Œ0æˆ–flaseå–æ¶ˆã€‚
+        storage: true, //æ˜¯å¦ä½¿ç”¨æœ¬åœ°å­˜å‚¨ã€‚
+        titleSuffix: '- by Willin PJAN', //æ ‡é¢˜åç¼€
         filter: function(href){
             if(href.indexOf('.png') >-1 || href.indexOf('.jpg') >-1 || href.indexOf('.gif') >-1 || href.indexOf('.rar') >-1 || href.indexOf('.zip') >-1 || href.indexOf('.7z') >-1){
-                return true;//True±íÊ¾¹ıÂË²»ÓÃpjan
+                return true;//Trueè¡¨ç¤ºè¿‡æ»¤ä¸ç”¨pjan
             }
           
         },
         beforeSend:function(){
-            //Loader¶¯»­¿ªÊ¼
+            //LoaderåŠ¨ç”»å¼€å§‹
         },
         callback: function(status){
           
             var type = status.type;
             switch(type){
-                 case 'success':  //Õı³£
+                 case 'success':  //æ­£å¸¸
                  case 'cache':
                     var json=w.parseJSON(status.data);
-                    //ÊÖ¶¯jQuery('sth').html(json.data.sth);
-                    // Animate¶¯»­
+                    //æ‰‹åŠ¨jQuery('sth').html(json.data.sth);
+                    // AnimateåŠ¨ç”»
                     }
-                 break; //¶ÁÈ¡»º´æ
+                 break; //è¯»å–ç¼“å­˜
                  case 'hash':
-                     // Animate¶¯»­
-                     break; //Ö»ÊÇhash±ä»¯
+                     // AnimateåŠ¨ç”»
+                     break; //åªæ˜¯hashå˜åŒ–
                  case 'error':
                    
-                 break; //·¢ÉúÒì³£
+                 break; //å‘ç”Ÿå¼‚å¸¸
             }
-            //Loader¶¯»­½áÊø
+            //LoaderåŠ¨ç”»ç»“æŸ
         }
     });
 });
