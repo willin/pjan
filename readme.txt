@@ -2,9 +2,9 @@
 
 PJAN是在Pjax基础上加入JSON支持的插件，原作者Welefen。
 
-1.0版本详细文章：http://blog.willin.org/frontend/pjan-alpha
+1.0版本详细文章： http://willin.org/ajax-u-need-2-know/
 
-作者：长岛冰泪 http://www.willin.org
+作者：长岛冰泪 http://willin.org
 
 示例代码：
 jQuery(document).ready(function(w){
