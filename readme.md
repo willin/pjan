@@ -1,4 +1,4 @@
-﻿说明：
+﻿## 说明
 
 PJAN是在Pjax基础上加入JSON支持的插件，原作者Welefen。
 
@@ -6,7 +6,9 @@ PJAN是在Pjax基础上加入JSON支持的插件，原作者Welefen。
 
 作者：长岛冰泪 http://willin.org
 
-示例代码：
+## 示例代码
+
+```js
 jQuery(document).ready(function(w){
     var $page_title='';
     w.pjan({
@@ -47,4 +49,4 @@ jQuery(document).ready(function(w){
         }
     });
 });
-
+```
